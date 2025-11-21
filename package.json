@@ -1,0 +1,35 @@
+{
+  "name": "client-docs",
+  "description": "Nosana Documentation for Clients",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress-vite build docs",
+    "docs:clean-dev": "vuepress-vite dev docs --clean-cache",
+    "docs:dev": "vuepress-vite dev docs",
+    "docs:update-package": "npx vp-update",
+    "generate": "vuepress build docs -d dist",
+    "lint": "npm run prettier && npm run eslint && npm run check-types",
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "prettier": "prettier --check 'docs/.vuepress/**/*.ts'",
+    "prettier:fix": "prettier --write 'docs/.vuepress/**/*.ts'",
+    "check-types": "tsc -p docs/.vuepress",
+    "eslint": "eslint 'docs/.vuepress/**/*.ts'",
+    "eslint:fix": "eslint 'docs/.vuepress/**/*.ts' --fix"
+  },
+  "devDependencies": {
+    "@mathjax/src": "^4.0.0",
+    "@vue/repl": "^4.7.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.26",
+    "@vuepress/plugin-icon": "^2.0.0-rc.118",
+    "chart.js": "^4.5.1",
+    "kotlin-playground": "^1.30.0",
+    "prettier": "^3.6.2",
+    "sandpack-vue3": "^3.1.12",
+    "sass-embedded": "^1.93.2",
+    "vue": "^3.5.24",
+    "vuepress": "2.0.0-rc.26",
+    "vuepress-theme-hope": "2.0.0-rc.98"
+  }
+}
