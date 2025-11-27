@@ -3,12 +3,18 @@ title: Deployments
 ---
 
 # Deployments
+To run your AI workload on the Nosana network, you'll need to create deployments.
 
-Deployments management using SDK and API.
+## What is a deployment?
+Deployments enable you to run containerized applications on the Nosana distributed computing network. Each deployment consists of:
 
-## Overview
+- **Container Definition**: Specified via an IPFS hash containing the [job definition](../job-definition/README.md).
+- **Market**: The Solana public key of the compute [market](../gpu-markets.md) where the deployment runs.
+- **Replicas**: The number of instances to run.
+- **Strategy**: The deployment strategy (SIMPLE, SIMPLE-EXTEND, SCHEDULED, INFINITE).
+- **Timeout**: The maximum execution time per job instance.
 
-This section covers how to create and manage deployments on the Nosana network using our SDK and API.
+For all available options when creating a deployment, see the [deployment options](./options.md) documentation.
 
 ## Topics
 

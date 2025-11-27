@@ -177,7 +177,40 @@ Authenticate to private Docker registries:
 }
 ```
 
-## Examples
+## Example
 
-[Example job definitions]
+Here is a simple example Job Definition of an Pytorch Jupyter Notebook:
 
+```json
+{
+  "version": "0.1",
+  "type": "container",
+  "ops": [
+    {
+      "type": "container/run",
+      "id": "Pytorch",
+      "args": {
+        "image": "docker.io/nosana/pytorch-jupyter:2.0.0",
+        "cmd": [
+          "jupyter",
+          "lab",
+          "--ip=0.0.0.0",
+          "--port=8888",
+          "--no-browser",
+          "--allow-root",
+          "--ServerApp.token=''",
+          "--ServerApp.password=''"
+        ],
+        "expose": 8888,
+        "gpu": true
+      }
+    }
+  ],
+  "meta": {
+    "trigger": "deployment-manager",
+    "system_requirements": {
+      "required_vram": 4
+    }
+  }
+}
+```
