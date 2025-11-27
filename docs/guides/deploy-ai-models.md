@@ -1,5 +1,5 @@
 ---
-title: How to Deploy Certain AI Models
+title: How to Deploy X AI model
 ---
 
 # How to Deploy Certain AI Models

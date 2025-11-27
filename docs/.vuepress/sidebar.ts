@@ -2,13 +2,14 @@ import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
   "/": [
-    "",
     {
       text: "Deployments",
       icon: "rocket",
       prefix: "deployments/",
-      link: "deployments/",
+      collapsible: true,
+      expanded: true,
       children: [
+        "deployments-intro",
         "create-deployment",
         "manage-deployment",
         "options",
@@ -18,18 +19,23 @@ export default sidebar({
       text: "Job Definition",
       icon: "file-code",
       prefix: "job-definition/",
-      link: "job-definition/",
+      collapsible: true,
+      expanded: true,
       children: [
+        "job-definition-intro",
         "schema",
         "endpoints",
         "literals",
+        "multiple-services",
+        "resources",
       ],
     },
     {
       text: "Guides",
       icon: "book",
       prefix: "guides/",
-      link: "guides/",
+      collapsible: true,
+      expanded: true,
       children: [
         "get-api-key",
         "my-first-deployment",

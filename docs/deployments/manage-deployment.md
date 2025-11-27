@@ -1,10 +1,10 @@
 ---
-title: Manage Deployment
+title: Manage Deployments
 ---
 
 # Manage Deployment
 
-Learn how to manage your deployments on the Nosana network.!
+Learn how to manage your deployments on the Nosana network through the SDK or API.
 
 ## Prerequisites
 
@@ -119,7 +119,7 @@ curl -s \
           "version": "0.1",
           "type": "container",
           "meta": {
-            "trigger": "cli"
+            "trigger": "api"
           },
           "ops": [
             {
@@ -207,7 +207,7 @@ curl -s \
         "version": "0.1",
         "type": "container",
         "meta": {
-          "trigger": "cli"
+          "trigger": "api"
         },
         "ops": [
           {

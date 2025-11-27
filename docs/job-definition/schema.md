@@ -26,7 +26,7 @@ Specifies execution triggers and system resources:
 
 ```json
 "meta": {
-  "trigger": "cli",
+  "trigger": "api",
   "system_resources": { "required_vram": 18 }
 }
 ```

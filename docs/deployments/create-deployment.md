@@ -52,7 +52,7 @@ const deployment = await client.deployments.create({
     "version": "0.1",
     "type": "container",
     "meta": {
-      "trigger": "cli"
+      "trigger": "api"
     },
     "ops": [
       {
@@ -90,7 +90,7 @@ curl -X POST "https://dashboard.k8s.prd.nos.ci/api/deployments/create" \
       "version": "0.1",
       "type": "container",
       "meta": {
-        "trigger": "cli"
+        "trigger": "api"
       },
       "ops": [
         {

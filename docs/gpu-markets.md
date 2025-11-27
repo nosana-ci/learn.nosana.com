@@ -1,24 +1,13 @@
 ---
-title: Markets
+title: GPU Markets
 ---
 
-# Markets
+Nosana offers a variety of GPU markets tailored to different needs. For real-time updates on prices, job timeouts, queue lengths, and more, visit the [Nosana Explorer]
 
-Learn about Nosana markets and how they work.
+## GPU Markets
 
-## Overview
+The following table shows all available GPU markets with their current pricing:
 
-[Content about Nosana markets]
+<GPUMarkets />
 
-## Market Types
-
-[Market types documentation]
-
-## How Markets Work
-
-[Explanation of market mechanics]
-
-## Getting Started
-
-[Getting started with markets]
-
+For the availability of each GPU, check our [explorer](https://dashboard.nosana.com/markets).
