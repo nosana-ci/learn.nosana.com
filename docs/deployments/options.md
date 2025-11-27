@@ -6,11 +6,12 @@ title: Options
 
 Each deployment consists of:
 
-- **Container Definition**: The [Job Definition](../job-definition/README.md).
-- **GPU Market**: The Solana public key of the compute [GPU market](../gpu-markets.md) where the deployment runs.
-- **Replicas**: The number of instances to run.
-- **Strategy**: The deployment strategy (SIMPLE, SIMPLE-EXTEND, SCHEDULED, INFINITE).
-- **Timeout**: The maximum execution time per job instance. In minutes
+- **name**: A descriptive name for your deployment
+- **market**: The Solana address of the GPU market where your deployment will run
+- **timeout**: Maximum execution time in minutes (60 = 60 minutes)
+- **replicas**: Number of instances to run simultaneously
+- **strategy**: Deployment strategy (`SIMPLE` for one-time execution)
+- **job_definition**: The container job definition specifying what to run
 
 ```json
 {
@@ -23,9 +24,7 @@ Each deployment consists of:
 }
 ```
 
---- 
-
-### Deployment Strategies
+## Deployment Strategies
 Below are the deployment strategies we currently support. 
 
 - **SIMPLE**: Runs the specified number of replicas once. Stops when all instances complete.
@@ -42,22 +41,7 @@ When you choose for a `SCHEDULED` strategy, you will need to provide the schedul
 }
 ```
 
----
-
-### Deployment Status
-
-- **DRAFT**: Initial state, not yet started
-- **STARTING**: Deployment is initializing
-- **RUNNING**: Active and processing jobs
-- **STOPPING**: Gracefully shutting down
-- **STOPPED**: Stopped but can be restarted
-- **ARCHIVED**: Permanently archived (cannot be restarted)
-- **ERROR**: Encountered an error
-- **INSUFFICIENT_FUNDS**: Not enough funds in vault to continue
-
----
-
-### Full Example
+## Full Example
 
 Below is a full example of deployment that will spin up a Pytorch Jupyter Notebook daily at midnight.
 ```json

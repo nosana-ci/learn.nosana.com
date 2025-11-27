@@ -9,9 +9,9 @@ export default sidebar({
       prefix: "deployments/",
       link: "deployments/",
       children: [
-        "options",
         "create-deployment",
         "manage-deployment",
+        "options",
       ],
     },
     {
