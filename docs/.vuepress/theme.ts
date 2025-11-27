@@ -12,11 +12,12 @@ export default hopeTheme(
   {
     hostname: "https://docs.nosana.com",
     logo: "/assets/logo.svg",
+    logoDark: "/assets/logo-dark.svg",
     repo: "https://github.com/nosana-ci/client-docs",
     docsDir: "docs",
     editLink: false,
     prevLink: false,
-    darkmode: "disable",
+    darkmode: "toggle",
 
     // footer
     footer: "MIT Licensed | Copyright © 2021-present Nosana",

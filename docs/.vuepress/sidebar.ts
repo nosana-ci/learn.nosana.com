@@ -30,13 +30,13 @@ export default sidebar({
       prefix: "guides/",
       link: "guides/",
       children: [
-        "my-first-deployment",
         "get-api-key",
+        "my-first-deployment",
         "manage-dashboard",
         "deploy-ai-models",
       ],
     },
-    "markets",
+    "gpu-markets",
     "glossary",
   ],
 });

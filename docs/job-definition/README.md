@@ -4,11 +4,7 @@ title: Job Definition
 
 # Job Definition
 
-Learn about job definitions, including schemas, endpoints, and literals.
-
-## Overview
-
-Job definitions specify how your workloads should be executed on the Nosana network.
+The Nosana Job schema allows us to create a job definition and specify the parameters needed for our job.
 
 ## Topics
 

@@ -4,15 +4,178 @@ title: Schema
 
 # Job Definition Schema
 
-The job definition schema defines the structure and requirements for jobs on the Nosana network.
+Nosana job definitions outline how tasks execute on Nosana's decentralized GPU network. Jobs are defined via structured JSON objects detailing commands, images, environment, resources, and container configurations.
 
-## Overview
+## Field Definitions
 
-[Content about the job definition schema]
+### 🔹 **Top-Level Fields**
 
-## Schema Structure
+| Field     | Type            | Required? | Description                                       |
+| --------- | --------------- | --------- | ------------------------------------------------- |
+| `version` | `string`        | ✅        | Job definition schema version (currently `"0.1"`) |
+| `type`    | `"container"`   | ✅        | Specifies the execution type                      |
+| `meta`    | `object`        | ❌        | Job metadata like trigger type and resources      |
+| `global`  | `object`        | ❌        | Defaults applied globally across all operations   |
+| `ops`     | `Ops` (`Array`) | ✅        | Ordered operations/tasks for execution            |
 
-[Schema documentation]
+---
+
+### 🔹 **Meta**
+
+Specifies execution triggers and system resources:
+
+```json
+"meta": {
+  "trigger": "cli",
+  "system_resources": { "required_vram": 18 }
+}
+```
+
+| Field              | Type                             | Description                               |
+| ------------------ | -------------------------------- | ----------------------------------------- |
+| `trigger`          | `"cli"` or `"dashboard"`         | Job origin trigger type                   |
+| `system_resources` | `Record<string, string\|number>` | System-level constraints (e.g., GPU VRAM) |
+
+---
+
+### 🔹 **Global Defaults**
+
+Defaults applied across all operations unless explicitly overridden:
+
+```json
+"global": {
+  "image": "ubuntu",
+  "gpu": true,
+  "entrypoint": "/bin/bash",
+  "env": { "KEY": "value" },
+  "work_dir": "/workspace"
+}
+```
+
+| Field        | Type                 | Description                   |
+| ------------ | -------------------- | ----------------------------- |
+| `image`      | `string`             | Default Docker image          |
+| `gpu`        | `boolean`            | Default GPU requirement       |
+| `entrypoint` | `string \| string[]` | Default Docker entrypoint     |
+| `env`        | `object`             | Default environment variables |
+| `work_dir`   | `string`             | Default working directory     |
+
+---
+
+### 🔹 **Operations (`ops`)**
+
+Defines tasks within the job:
+
+```json
+"ops": [{
+  "id": "unique-id",
+  "type": "container/run",
+  "args": {
+    "cmd": ["command", "arg1"],
+    "resources": [],
+    "authentication": {}
+  }
+}]
+```
+
+| Field  | Required? | Description                                      |
+| ------ | --------- | ------------------------------------------------ |
+| `id`   | ✅        | Unique identifier per operation                  |
+| `type` | ✅        | `"container/run"` or `"container/create-volume"` |
+| `args` | ✅        | Operation-specific arguments                     |
+
+---
+
+### 🔹 **Operation Args**
+
+`container/run` type arguments:
+
+| Field            | Type                      | Required? | Description                                                         |
+| ---------------- | ------------------------- | --------- | ------------------------------------------------------------------- |
+| `image`          | `string`                  | ✅        | Docker image, It is recommended to put the URL to the Docker Image. |
+| `cmd`            | `string \| string[]`      | ❌        | Commands to execute                                                 |
+| `gpu`            | `boolean`                 | ❌        | GPU requirement                                                     |
+| `expose`         | `number \| ExposedPort[]` | ❌        | Ports exposed                                                       |
+| `resources`      | `Resource[]`              | ❌        | External data sources                                               |
+| `authentication` | `{docker: DockerAuth}`    | ❌        | Docker registry authentication                                      |
+
+#### cmd
+
+The `cmd` array is important to illustrate, because there are is nuance in how to use it.
+If you are familiar with how to use the `cmd` property in Docker, you should already have an idea of how this property works.
+
+##### String based CMD
+
+When the first element of the array is the whole command, such as:
+`"gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"`
+Bash will be used as the shell to interpret this command.
+
+##### Array based CMD
+
+Another option is to put each command and every flag as it's own element in an array:
+`["/bin/sh", "-c", gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "main:app"]`
+
+With the array based notation, we are able to specify the shell we want to use.
+Note that most often you will need to append `-c` flag after `/bin/sh`
+
+You can read more about how to use the `cmd` property by going to the [Docker Documentation](https://docs.docker.com/reference/dockerfile/#cmd).
+
+---
+
+### 🔹 **Resources**
+
+External sources loaded into the container:
+
+:::danger
+When using credentials please be mindful, and use the confidential jobs feature.
+Please read [Confidential Jobs on Nosana](./confidential.md) to learn how to post jobs confidentially to Nosana without leaking your secrets.
+:::
+
+**S3 resource example:**
+
+You can read more about how to use S3 resources at [S3 Resources in Nosana](./s3_resources.md)
+
+```json
+{
+  "type": "S3",
+  "url": "https://storage.example.com/models",
+  "target": "/data/",
+  "files": ["model.bin"],
+  "IAM": {
+    "ACCESS_KEY_ID": "key",
+    "SECRET_ACCESS_KEY": "secret"
+  }
+}
+```
+
+**Hugging Face resource example:**
+
+You can read more about how to use Hugging Face resources at [HuggingFace Resources](./loading_resources.md)
+
+```json
+{
+  "type": "HF",
+  "repo": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "target": "/data-models/"
+}
+```
+
+---
+
+### 🔹 **Docker Authentication**
+
+Authenticate to private Docker registries:
+
+```json
+"authentication": {
+  "docker": {
+    "username": "user",
+    "password": "pass",
+    "email": "optional",
+    "server": "optional registry URL"
+  }
+}
+```
 
 ## Examples
 

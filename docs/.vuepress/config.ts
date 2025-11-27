@@ -7,7 +7,7 @@ export default defineUserConfig({
   base: "/",
 
   lang: "en-US",
-  title: "Client Docs",
+  title: "Learn",
   description: "Client Documentation for Nosana",
 
   theme,

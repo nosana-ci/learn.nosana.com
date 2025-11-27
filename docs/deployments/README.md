@@ -4,7 +4,7 @@ title: Deployments
 
 # Deployments
 
-Deployments management using SDK and API directly.
+Deployments management using SDK and API.
 
 ## Overview
 

@@ -12,11 +12,6 @@ Creating a deployment allows you to deploy your AI workloads to the Nosana netwo
 
 ## Using the SDK
 
-[Content about creating deployments with SDK]
-
-## Using the API
-
-[Content about creating deployments with API]
 
 ## Next Steps
 

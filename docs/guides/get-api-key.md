@@ -4,29 +4,26 @@ title: How to Get an API Key
 
 # How to Get an API Key
 
-Learn how to obtain and configure your Nosana API key.
+## Get an API Key
 
-## Overview
 
-API keys are required to authenticate with the Nosana API and SDK.
-
-## Steps
 
 ### Step 1: Access the Dashboard
+Log in to the [Nosana Dashboard](https://dashboard.nosana.com) with your Nosana account and navigate to the `Account` page.
 
-[Content about accessing the dashboard]
+![API keys overview](../.vuepress/public/assets/image/api_keys.png)
 
 ### Step 2: Generate API Key
+In the `API Keys` section on the Account page, you can view your existing API keys and create new ones.
 
-[Content about generating API key]
+Click `Create Key` to generate a new API key. Give your new key a descriptive name and an expiration date. Once you've filled in both, your API key will be shown with an option to copy it.
 
-### Step 3: Configure Your Environment
+![Create API key](../.vuepress/public/assets/image/create_key.png)
 
-[Content about configuring the API key]
+::::warning
+Keep your API key **private**. Do not share it publicly, include it in client-side code, or commit it to version control. If you suspect your key has been exposed, revoke it immediately and create a new one.
+::::
 
-## Security Best Practices
-
-[Security recommendations]
 
 ## Next Steps
 
