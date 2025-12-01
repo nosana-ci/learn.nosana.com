@@ -126,11 +126,6 @@ You can read more about how to use the `cmd` property by going to the [Docker Do
 
 External sources loaded into the container:
 
-:::danger
-When using credentials please be mindful, and use the confidential jobs feature.
-Please read [Confidential Jobs on Nosana](./confidential.md) to learn how to post jobs confidentially to Nosana without leaking your secrets.
-:::
-
 **S3 resource example:**
 
 You can read more about how to use S3 resources at [S3 Resources in Nosana](./s3_resources.md)

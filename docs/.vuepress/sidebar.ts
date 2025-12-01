@@ -9,7 +9,7 @@ export default sidebar({
       collapsible: true,
       expanded: true,
       children: [
-        "deployments-intro",
+        "intro",
         "create-deployment",
         "manage-deployment",
         "options",
@@ -22,7 +22,7 @@ export default sidebar({
       collapsible: true,
       expanded: true,
       children: [
-        "job-definition-intro",
+        "intro",
         "schema",
         "endpoints",
         "literals",
@@ -40,7 +40,6 @@ export default sidebar({
         "get-api-key",
         "my-first-deployment",
         "manage-dashboard",
-        "deploy-ai-models",
       ],
     },
     "gpu-markets",
