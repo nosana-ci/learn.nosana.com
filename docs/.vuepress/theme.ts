@@ -1,8 +1,6 @@
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { hopeTheme } from "vuepress-theme-hope";
-
-import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -179,16 +177,29 @@ export default hopeTheme(
         include: {
           deep: true,
           resolvePath: (file) => {
-            if (file.startsWith('@components/'))
-              return file.replace('@components', path.resolve(__dirname, '../../../components/src'));
+            if (file.startsWith("@components/"))
+              return file.replace(
+                "@components",
+                path.resolve(__dirname, "../../../components/src"),
+              );
 
-            if (file.startsWith('@echarts/'))
-              return file.replace('@echarts', path.resolve(__dirname, '../../../md-enhance/src/echarts'));
+            if (file.startsWith("@echarts/"))
+              return file.replace(
+                "@echarts",
+                path.resolve(__dirname, "../../../md-enhance/src/echarts"),
+              );
 
-            if (file.startsWith('@md-enhance/'))
-              return file.replace('@md-enhance', path.resolve(__dirname, '../../../md-enhance/src'));
+            if (file.startsWith("@md-enhance/"))
+              return file.replace(
+                "@md-enhance",
+                path.resolve(__dirname, "../../../md-enhance/src"),
+              );
 
-            if (file.startsWith('@pwa/')) return file.replace('@pwa', path.resolve(__dirname, '../../../pwa2/src'));
+            if (file.startsWith("@pwa/"))
+              return file.replace(
+                "@pwa",
+                path.resolve(__dirname, "../../../pwa2/src"),
+              );
 
             return file;
           },
@@ -199,35 +210,35 @@ export default hopeTheme(
         markmap: false,
         mermaid: true,
         playground: {
-          presets: ['ts', 'vue', 'unocss'],
+          presets: ["ts", "vue", "unocss"],
         },
         revealJs: {
-          plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
+          plugins: ["highlight", "math", "search", "notes", "zoom"],
           themes: [
-            'auto',
-            'beige',
-            'black',
-            'blood',
-            'league',
-            'moon',
-            'night',
-            'serif',
-            'simple',
-            'sky',
-            'solarized',
-            'white',
+            "auto",
+            "beige",
+            "black",
+            "blood",
+            "league",
+            "moon",
+            "night",
+            "serif",
+            "simple",
+            "sky",
+            "solarized",
+            "white",
           ],
         },
         sandpack: true,
         stylize: [
           {
-            matcher: 'Recommended',
+            matcher: "Recommended",
             replacer: ({ tag }) => {
-              if (tag === 'em')
+              if (tag === "em")
                 return {
-                  tag: 'Badge',
-                  attrs: { type: 'tip' },
-                  content: 'Recommended',
+                  tag: "Badge",
+                  attrs: { type: "tip" },
+                  content: "Recommended",
                 };
             },
           },
@@ -238,7 +249,7 @@ export default hopeTheme(
         vPre: true,
         vuePlayground: true,
       },
-    
+
       icon: {
         assets: "fontawesome",
       },

@@ -8,12 +8,7 @@ export default sidebar({
       prefix: "deployments/",
       collapsible: true,
       expanded: true,
-      children: [
-        "intro",
-        "create-deployment",
-        "manage-deployment",
-        "options",
-      ],
+      children: ["intro", "create-deployment", "manage-deployment", "options"],
     },
     {
       text: "Job Definition",
@@ -36,11 +31,7 @@ export default sidebar({
       prefix: "guides/",
       collapsible: true,
       expanded: true,
-      children: [
-        "get-api-key",
-        "my-first-deployment",
-        "manage-dashboard",
-      ],
+      children: ["get-api-key", "my-first-deployment", "manage-dashboard"],
     },
     "gpu-markets",
     "glossary",
