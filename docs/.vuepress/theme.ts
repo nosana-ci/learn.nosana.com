@@ -121,6 +121,7 @@ export default hopeTheme(
         indexName: "nosana",
       },
 
+      // PWA plugin options – allow extra fields like `cachePic`
       pwa: {
         favicon: "/favicon.ico",
         cacheHTML: true,
@@ -157,7 +158,7 @@ export default hopeTheme(
           ],
           shortcuts: [],
         },
-      },
+      } as Record<string, unknown>,
 
       mdEnhancePlugin: {
         alert: true,
@@ -176,29 +177,29 @@ export default hopeTheme(
         imgSize: true,
         include: {
           deep: true,
-          resolvePath: (file) => {
+          resolvePath: (file: string) => {
             if (file.startsWith("@components/"))
               return file.replace(
                 "@components",
-                path.resolve(__dirname, "../../../components/src"),
+                resolve(__dirname, "../../../components/src"),
               );
 
             if (file.startsWith("@echarts/"))
               return file.replace(
                 "@echarts",
-                path.resolve(__dirname, "../../../md-enhance/src/echarts"),
+                resolve(__dirname, "../../../md-enhance/src/echarts"),
               );
 
             if (file.startsWith("@md-enhance/"))
               return file.replace(
                 "@md-enhance",
-                path.resolve(__dirname, "../../../md-enhance/src"),
+                resolve(__dirname, "../../../md-enhance/src"),
               );
 
             if (file.startsWith("@pwa/"))
               return file.replace(
                 "@pwa",
-                path.resolve(__dirname, "../../../pwa2/src"),
+                resolve(__dirname, "../../../pwa2/src"),
               );
 
             return file;
@@ -233,7 +234,7 @@ export default hopeTheme(
         stylize: [
           {
             matcher: "Recommended",
-            replacer: ({ tag }) => {
+            replacer: ({ tag }: { tag: string }) => {
               if (tag === "em")
                 return {
                   tag: "Badge",
@@ -253,7 +254,7 @@ export default hopeTheme(
       icon: {
         assets: "fontawesome",
       },
-    },
+    } as Record<string, unknown>,
   },
   { custom: true },
 );
