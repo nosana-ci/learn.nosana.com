@@ -3,35 +3,38 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     {
+      text: "About",
+      // icon: "info",
+      prefix: "about/",
+      collapsible: true,
+      children: ["introduction", "key-concepts"],
+    },
+    {
       text: "Deployments",
-      icon: "rocket",
+      // icon: "rocket",
       prefix: "deployments/",
       collapsible: true,
-      expanded: true,
       children: ["intro", "strategies", "options"],
     },
     {
       text: "API",
-      icon: "api",
+      // icon: "code",
       prefix: "api/",
       collapsible: true,
-      expanded: true,
       children: ["intro", "create-deployments", "manage-deployments"],
     },
     {
       text: "TypeScript SDK",
-      icon: "code",
+      // icon: "code",
       prefix: "sdk/",
       collapsible: true,
-      expanded: true,
       children: ["intro", "create-deployments", "manage-deployments"],
     },
     {
       text: "Job Definition",
-      icon: "file-code",
+      // icon: "file-code",
       prefix: "job-definition/",
       collapsible: true,
-      expanded: true,
       children: [
         "intro",
         "schema",
@@ -43,13 +46,20 @@ export default sidebar({
     },
     {
       text: "Guides",
-      icon: "book",
+      // icon: "book-open",
       prefix: "guides/",
       collapsible: true,
-      expanded: true,
       children: ["get-api-key", "my-first-deployment", "manage-dashboard"],
     },
-    "gpu-markets",
-    "glossary",
+    {
+      text: "GPU Markets",
+      // icon: "computer",
+      link: "gpu-markets",
+    },
+    {
+      text: "Glossary",
+      // icon: "book",
+      link: "glossary",
+    },
   ],
 });

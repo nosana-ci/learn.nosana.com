@@ -1,7 +1,13 @@
 import { defineUserConfig } from "vuepress";
+import { path } from "@vuepress/utils";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
 
 import theme from "./theme.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineUserConfig({
   base: "/",
@@ -21,6 +27,13 @@ export default defineUserConfig({
   ],
 
   theme,
+
+  alias: {
+    "@theme-hope/components/sidebar/SidebarLinks": path.resolve(
+      __dirname,
+      "./overrides/SidebarLinks.js",
+    ),
+  },
 
   bundler: viteBundler({
     viteOptions: {

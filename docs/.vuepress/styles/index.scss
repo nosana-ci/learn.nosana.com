@@ -1,2 +1,28 @@
-// you can change config here
-$code-lang: 'css' 'html' 'js' 'ts' 'vue';
+$code-lang: "css" "html" "js" "ts" "vue";
+
+.vp-sidebar-header.active:not(.exact) {
+  padding-inline-start: 0.5rem;
+  color: var(--vp-c-accent);
+}
+
+.vp-sidebar-links {
+  list-style: none;
+
+  li {
+    list-style: none;
+  }
+
+  .vp-sidebar > & {
+    padding: 1.5rem 0;
+
+    > li:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  & & {
+    > li:not(:first-child) {
+      margin-top: 0.25rem;
+    }
+  }
+}
