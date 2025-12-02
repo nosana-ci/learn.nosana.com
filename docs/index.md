@@ -17,14 +17,27 @@ Welcome to the Nosana documentation! This guide will help you get started with d
 
 ### Core Concepts
 
-- **[Deployments](./deployments/)** - Learn how to manage deployments using SDK and API
-  - [Create a Deployment](./deployments/create-deployment.md)
-  - [Manage Deployment](./deployments/manage-deployment.md)
+- **Deployments**
+  - [Intro](./deployments/intro.md)
+  - [Strategies](./deployments/strategies.md)
+  - [Options](./deployments/options.md)
 
 - **[Job Definition](./job-definition/)** - Understand job schemas, endpoints, and literals
   - [Schema](./job-definition/schema.md)
   - [Endpoints](./job-definition/endpoints.md)
   - [Literals](./job-definition/literals.md)
+
+### API
+
+- **[Intro](./api/intro.md)** - Prerequisites, authentication, and Swagger reference
+- **[Create Deployments](./api/create-deployments.md)**
+- **[Manage Deployments](./api/manage-deployments.md)**
+
+### TypeScript SDK
+
+- **[Intro](./sdk/intro.md)** - Installation and client setup
+- **[Create Deployments](./sdk/create-deployments.md)**
+- **[Manage Deployments](./sdk/manage-deployments.md)**
 
 ### Guides & Tutorials
 

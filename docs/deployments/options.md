@@ -11,7 +11,7 @@ Each deployment consists of:
 - **timeout**: Maximum execution time in minutes (60 = 60 minutes)
 - **replicas**: Number of instances to run simultaneously
 - **strategy**: Deployment strategy (`SIMPLE` for one-time execution)
-- **job_definition**: The container job definition specifying what to run
+- **job_definition**: The container job definition specifying what to run (see the [Job Definition](../job-definition/intro.md))
 
 ```json
 {
@@ -21,23 +21,6 @@ Each deployment consists of:
   "timeout": 60, // minutes
   "strategy": "SIMPLE",
   "job_definition": {...}
-}
-```
-
-## Deployment Strategies
-Below are the deployment strategies we currently support. 
-
-- **SIMPLE**: Runs the specified number of replicas once. Stops when all instances complete.
-- **SIMPLE-EXTEND**: Similar to SIMPLE but can be extended with additional replicas after completion.
-- **SCHEDULED**: Runs deployments on a predefined schedule. 
-- **INFINITE**: **(NOT YET IMPLEMENTED)** Continuously maintains the specified number of replicas, restarting instances as they complete.
-
-When you choose for a `SCHEDULED` strategy, you will need to provide the schedule in cron format.
-```json
-{
-  "schedule": "0 0 * * *", // daily at midnight
-  "strategy": "SCHEDULED"
-  ...
 }
 ```
 
