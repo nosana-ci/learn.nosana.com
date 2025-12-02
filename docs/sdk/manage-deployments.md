@@ -117,15 +117,14 @@ const deployment = await client.deployments.pipe(
 const deployment = await client.deployments.pipe(
   'existing-deployment-id',
   async (deployment) => {
+    await deployment.start();
+  },
+  async (deployment) => {
     await deployment.stop();
   }
 );
 ```
 
 This example gets a deployment, updates its replica count and timeout, and then starts it in one composed call.
-
-## Additional Operations
-
-For all deployment fields and options, see **[Deployment Options](../deployments/options.md)**.
 
 
