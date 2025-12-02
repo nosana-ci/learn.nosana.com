@@ -23,7 +23,7 @@ When creating a deployment, you specify:
 - Deployment configuration: **timeout**, **replicas**, **strategy**
 - The **job definition** (container image, commands, operations)
 
-For all available fields, see **[Deployment Options](../deployments/options.md)**.
+For all available fields, see **[Deployment Options](../deployments/options.md)**. You can find GPU markets **[here](../gpu-markets.md)**.
 
 ## Create a Deployment
 
@@ -74,11 +74,3 @@ curl -s \
 ```
 
 Replace `<deployment_id>` with the `id` returned from the create call.
-
-## Next Steps
-
-- You can find GPU markets in the **[Nosana Dashboard](https://dashboard.nosana.com/markets)**.
-- **[Manage Deployments via API](./manage-deployments.md)**
-- For all options such as strategies, replicas, and timeouts, see **[Deployment Options](../deployments/options.md)**.
-
-

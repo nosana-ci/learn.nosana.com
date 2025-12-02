@@ -32,8 +32,3 @@ The Nosana dashboard provides a visual interface for managing your deployments.
 
 [Content about managing deployments]
 
-## Next Steps
-
-- [Create a Deployment](../deployments/create-deployment.md)
-- [How to Deploy Certain AI Models](./deploy-ai-models.md)
-

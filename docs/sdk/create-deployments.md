@@ -24,7 +24,7 @@ When creating a deployment, you specify:
 - Deployment configuration: **timeout**, **replicas**, **strategy**
 - The **job definition** (container image, commands, operations)
 
-For all available fields, see **[Deployment Options](../deployments/options.md)**.
+For all available fields, see **[Deployment Options](../deployments/options.md)**. You can find GPU markets **[here](../gpu-markets.md)**.
 
 ## Create a Deployment
 
@@ -60,8 +60,6 @@ async function createDeployment() {
       ],
     },
   });
-
-  console.log('Created deployment:', deployment.id);
 }
 ```
 
@@ -75,11 +73,3 @@ async function startDeployment(id: string) {
   await deployment.start();
 }
 ```
-
-## Next Steps
-
-- **[Manage Deployments with the SDK](./manage-deployments.md)**
-- You can find GPU markets in the **[Nosana Dashboard](https://dashboard.nosana.com/markets)**.
-- For available deployment fields and strategies, see **[Deployment Options](../deployments/options.md)**.
-
-

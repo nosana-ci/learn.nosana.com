@@ -39,6 +39,66 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID | jq .
 ```
 
+## Update Job Definition (Create a Revision)
+
+Create a new revision of the job definition for an existing deployment:
+
+```bash
+curl -s \
+  -X POST \
+  -H "Authorization: Bearer $NOSANA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d @job-definition.json \
+  https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/revisions | jq .
+```
+
+The body should contain a `job_definition` matching the structure described in the job definition docs.
+
+## Update Replica Count
+
+```bash
+curl -s \
+  -X PATCH \
+  -H "Authorization: Bearer $NOSANA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"replicas": 3}' \
+  https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/update-replicas | jq .
+```
+
+## Update Schedule (SCHEDULED Strategy Only)
+
+```bash
+curl -s \
+  -X PATCH \
+  -H "Authorization: Bearer $NOSANA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"schedule": "0 0 * * *"}' \
+  https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/update-schedule | jq .
+```
+
+This only applies to deployments using the `SCHEDULED` strategy. See **[Deployment Strategies](../deployments/strategies.md)** for cron examples.
+
+## Update Timeout
+
+```bash
+curl -s \
+  -X PATCH \
+  -H "Authorization: Bearer $NOSANA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"timeout": 120}' \
+  https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/update-timeout | jq .
+```
+
+## Start a Deployment
+
+Start an existing deployment that is in a draft or stopped state:
+
+```bash
+curl -s \
+  -H "Authorization: Bearer $NOSANA_API_KEY" \
+  https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/start | jq .
+```
+
 ## Stop a Deployment
 
 Stop a running deployment:

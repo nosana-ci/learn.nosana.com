@@ -32,8 +32,4 @@ This guide covers deploying various AI models, including popular frameworks and 
 
 [Common issues and solutions]
 
-## Next Steps
-
-- [My First Deployment](./my-first-deployment.md)
-- [Job Definition Schema](../job-definition/schema.md)
 

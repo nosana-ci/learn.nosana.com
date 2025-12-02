@@ -51,9 +51,6 @@ const deployment = await client.deployments.create({
     ]
   }
 });
-
-const deploymentId = deployment.id;
-console.log('Created deployment:', deploymentId);
 ```
 
 @tab cURL API
@@ -172,7 +169,6 @@ The deployment object contains the service URLs in the `endpoints` field. You ca
 ```ts
 // Access the service endpoint from the deployment
 const serviceUrl = deployment.endpoints[0]?.url;
-console.log('Service available at:', serviceUrl);
 ```
 
 @tab cURL API
