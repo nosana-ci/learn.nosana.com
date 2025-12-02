@@ -11,7 +11,7 @@ Deployments enable you to run containerized applications on the Nosana distribut
 - **Container Definition**: Specified via an IPFS hash containing the [job definition](../job-definition/intro.md).
 - **Market**: The Solana public key of the compute [market](../gpu-markets.md) where the deployment runs.
 - **Replicas**: The number of instances to run.
-- **Strategy**: The deployment strategy (SIMPLE, SIMPLE-EXTEND, SCHEDULED, INFINITE).
+- **Strategy**: The [deployment strategy](./strategies.md) (SIMPLE, SIMPLE-EXTEND, SCHEDULED, INFINITE).
 - **Timeout**: The maximum execution time per job instance.
 
 For all available options when creating a deployment, see the [deployment options](./options.md) documentation.

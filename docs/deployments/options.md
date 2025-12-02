@@ -10,7 +10,7 @@ Each deployment consists of:
 - **market**: The Solana address of the GPU market where your deployment will run
 - **timeout**: Maximum execution time in minutes (60 = 60 minutes)
 - **replicas**: Number of instances to run simultaneously
-- **strategy**: Deployment strategy (`SIMPLE` for one-time execution)
+- **strategy**: Deployment strategy (`SIMPLE` for one-time execution, see [strategies](./strategies.md) for more info)
 - **job_definition**: The container job definition specifying what to run (see the [Job Definition](../job-definition/intro.md))
 
 ```json
