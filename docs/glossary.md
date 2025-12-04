@@ -23,7 +23,7 @@ A GPU market segment designed for new and unvalidated GPU hosts, where providers
 A lightweight, isolated runtime environment that packages your application code, dependencies, and system libraries. Nosana runs your workloads as containers (for example, Docker images) on GPU hosts.
 
 ### Credits
-The usage-based currency required to create and run deployments on the Nosana network. Credits are consumed as your jobs run on GPU resources and can be acquired or claimed through the Nosana Dashboard.
+The usage-based currency required to create and run deployments on the Nosana network. Credits are consumed as your jobs run on GPU resources and can be claimed through the Nosana Dashboard.
 
 ## D
 
