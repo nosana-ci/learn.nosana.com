@@ -128,8 +128,6 @@ External sources loaded into the container:
 
 **S3 resource example:**
 
-You can read more about how to use S3 resources at [S3 Resources in Nosana](./s3_resources.md)
-
 ```json
 {
   "type": "S3",
@@ -145,7 +143,6 @@ You can read more about how to use S3 resources at [S3 Resources in Nosana](./s3
 
 **Hugging Face resource example:**
 
-You can read more about how to use Hugging Face resources at [HuggingFace Resources](./loading_resources.md)
 
 ```json
 {
@@ -154,6 +151,8 @@ You can read more about how to use Hugging Face resources at [HuggingFace Resour
   "target": "/data-models/"
 }
 ```
+
+You can read more about how resources at [Resources](./resources.md)
 
 ---
 
