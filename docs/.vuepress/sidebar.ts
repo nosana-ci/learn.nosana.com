@@ -7,7 +7,7 @@ export default sidebar({
       // icon: "info",
       prefix: "about/",
       collapsible: true,
-      children: ["introduction", "key-concepts"],
+      children: ["introduction", "key-concepts", "glossary"],
     },
     {
       text: "Deployments",
@@ -56,11 +56,6 @@ export default sidebar({
       text: "GPU Markets",
       // icon: "computer",
       link: "gpu-markets",
-    },
-    {
-      text: "Glossary",
-      // icon: "book",
-      link: "glossary",
     },
   ],
 });

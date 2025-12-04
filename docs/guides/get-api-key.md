@@ -4,12 +4,12 @@ title: How to Get an API Key
 
 # How to Get an API Key
 
-## Get an API Key
+## Get an <Glossary term="API Key">API Key</Glossary>
 
 
 
 ### Step 1: Access the Dashboard
-Log in to the [Nosana Dashboard](https://dashboard.nosana.com) with your Nosana account and navigate to the `Account` page.
+Log in to the <Glossary term="Dashboard"><a href="https://dashboard.nosana.com">Nosana Dashboard</a></Glossary> with your Nosana account and navigate to the `Account` page.
 
 ![API keys overview](../.vuepress/public/assets/image/api_keys.png)
 

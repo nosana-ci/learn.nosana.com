@@ -4,7 +4,7 @@ title: Manage Deployments in the Dashboard
 
 # Manage Deployments in the Dashboard
 
-Learn how to use the Nosana dashboard to manage your deployments.
+Learn how to use the Nosana <Glossary term="Dashboard">dashboard</Glossary> to manage your <Glossary term="Deployment">deployments</Glossary>.
 
 ## Overview
 

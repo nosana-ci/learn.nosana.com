@@ -10,8 +10,8 @@ Use the Nosana HTTP API to create and manage deployments from any language or en
 
 Before calling the API, ensure you have:
 
-- **API key**: A valid Nosana API key. See the [API key guide](../guides/get-api-key.md).
-- **Credits**: Sufficient credit balance on your Nosana account to run deployments.
+- **<Glossary term="API Key">API key</Glossary>**: A valid Nosana API key. See the [API key guide](../guides/get-api-key.md).
+- **<Glossary term="Credits">Credits</Glossary>**: Sufficient credit balance on your Nosana account to run deployments.
 - **Base URL**: The current production API base URL:
 
 ```bash

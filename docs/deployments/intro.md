@@ -3,7 +3,7 @@ title: Intro
 ---
 
 # Deployments
-To run your AI workload on the Nosana network, you'll need to create deployments.
+To run your AI workload on the Nosana network, you'll need to create <Glossary term="Deployment">deployments</Glossary>.
 
 ## What is a deployment?
 Deployments enable you to run <Glossary term="Container">containerized</Glossary> applications on the Nosana distributed computing network. Each deployment consists of:
@@ -31,9 +31,9 @@ For all available options when creating a deployment, see the [deployment option
 
 Before creating and managing deployments, ensure you have:
 
-- **API Key**: A valid Nosana API key. Learn how to get one in the [API key guide](../guides/get-api-key.md).
-- **Credit Balance**: Sufficient credit balance on your Nosana account to run deployments.
-- **SDK (Optional)**: The Nosana Typescript SDK can be installed for easier integration, though you can also make direct API requests. Install it via:
+- **<Glossary term="API Key">API Key</Glossary>**: A valid Nosana API key. Learn how to get one in the [API key guide](../guides/get-api-key.md).
+- **Credit Balance**: Sufficient <Glossary term="Credits">credits</Glossary> on your Nosana account to run deployments.
+- **SDK (Optional)**: The Nosana Typescript <Glossary term="SDK">SDK</Glossary> can be installed for easier integration, though you can also make direct API requests. Install it via:
   ```bash
   npm install @nosana/sdk
   ```

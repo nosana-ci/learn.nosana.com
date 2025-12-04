@@ -8,7 +8,7 @@ Use the Nosana REST API to list, inspect, stop, and archive deployments.
 
 ## Prerequisites
 
-- **API Key**: See the [API key guide](../guides/get-api-key.md).
+- **<Glossary term="API Key">API Key</Glossary>**: See the [API key guide](../guides/get-api-key.md).
 - **Existing deployments**: Created via the API or dashboard.
 
 All examples assume:

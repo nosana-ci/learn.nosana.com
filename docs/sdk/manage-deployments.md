@@ -4,7 +4,7 @@ title: Manage Deployments
 
 # Manage Deployments
 
-Use the Nosana TypeScript SDK to list, inspect, stop, and archive deployments.
+Use the Nosana TypeScript <Glossary term="SDK">SDK</Glossary> to list, inspect, stop, and archive deployments.
 
 ## Prerequisites
 

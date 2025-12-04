@@ -4,16 +4,16 @@ title: Create Deployments
 
 # Create Deployments
 
-Use the Nosana TypeScript SDK to programmatically create and start deployments.
+Use the Nosana TypeScript <Glossary term="SDK">SDK</Glossary> to programmatically create and start deployments.
 
 ## Prerequisites
 
 Before creating deployments, ensure you have:
 
 - **SDK installed**: See the [SDK intro](./intro.md).
-- **API Key**: Available as an environment variable (`NOSANA_API_KEY` recommended).
-- **Credit Balance**: Sufficient credit balance on your Nosana account.
-- **Job Definition**: A valid [job definition](../job-definition/intro.md).
+- **<Glossary term="API Key">API Key</Glossary>**: Available as an environment variable (`NOSANA_API_KEY` recommended).
+- **Credit Balance**: Sufficient <Glossary term="Credits">credit balance</Glossary> on your Nosana account.
+- **<Glossary term="Job Definition">Job Definition</Glossary>**: A valid [job definition](../job-definition/intro.md).
 
 ## What you configure
 

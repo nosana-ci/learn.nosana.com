@@ -4,14 +4,14 @@ title: TypeScript SDK Intro
 
 # TypeScript SDK
 
-The Nosana TypeScript SDK provides a convenient, typed interface for creating and managing deployments from Node.js or browser environments.
+The Nosana TypeScript <Glossary term="SDK">SDK</Glossary> provides a convenient, typed interface for creating and managing deployments from Node.js or browser environments.
 
 ## Prerequisites
 
 Before using the SDK, ensure you have:
 
-- **API Key**: A valid Nosana API key. See the [API key guide](../guides/get-api-key.md).
-- **Credits**: Sufficient credits in your Nosana account to run deployments.
+- **<Glossary term="API Key">API Key</Glossary>**: A valid Nosana API key. See the [API key guide](../guides/get-api-key.md).
+- **<Glossary term="Credits">Credits</Glossary>**: Sufficient credits in your Nosana account to run deployments.
 - **Node.js**: A recent LTS version of Node.js is recommended.
 
 ## Installation

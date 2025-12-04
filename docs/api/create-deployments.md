@@ -4,15 +4,15 @@ title: Create Deployments
 
 # Create Deployments
 
-Learn how to create a new deployment using the Nosana HTTP API.
+Learn how to create a new <Glossary term="Deployment">deployment</Glossary> using the Nosana HTTP API.
 
 ## Prerequisites
 
 Before creating deployments, ensure you have:
 
-- **API Key**: A valid Nosana API key. See the [API key guide](../guides/get-api-key.md).
-- **Credit Balance**: Sufficient credit balance on your Nosana account to run deployments.
-- **Job Definition**: A valid [job definition](../job-definition/intro.md) describing the container workload.
+- **<Glossary term="API Key">API Key</Glossary>**: A valid Nosana API key. See the [API key guide](../guides/get-api-key.md).
+- **Credit Balance**: Sufficient <Glossary term="Credits">credit balance</Glossary> on your Nosana account to run deployments.
+- **<Glossary term="Job Definition">Job Definition</Glossary>**: A valid [job definition](../job-definition/intro.md) describing the container workload.
 
 ## What you configure
 
