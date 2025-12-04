@@ -3,4 +3,4 @@ home: false
 title: Introduction
 ---
 
-@[include](./about/introduction.md)
+<!-- @include: ./about/introduction.md -->

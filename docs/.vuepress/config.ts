@@ -31,7 +31,7 @@ export default defineUserConfig({
   alias: {
     "@theme-hope/components/sidebar/SidebarLinks": path.resolve(
       __dirname,
-      "./overrides/SidebarLinks.js",
+      "./overrides/SidebarLinks.js"
     ),
   },
 

@@ -41,36 +41,7 @@ export default hopeTheme(
       imgLazyload: true,
       imgMark: true,
       imgSize: true,
-      include: {
-        deep: true,
-        resolvePath: (file: string) => {
-          if (file.startsWith("@components/"))
-            return file.replace(
-              "@components",
-              resolve(__dirname, "../../../components/src"),
-            );
-
-          if (file.startsWith("@echarts/"))
-            return file.replace(
-              "@echarts",
-              resolve(__dirname, "../../../md-enhance/src/echarts"),
-            );
-
-          if (file.startsWith("@md-enhance/"))
-            return file.replace(
-              "@md-enhance",
-              resolve(__dirname, "../../../md-enhance/src"),
-            );
-
-          if (file.startsWith("@pwa/"))
-            return file.replace(
-              "@pwa",
-              resolve(__dirname, "../../../pwa2/src"),
-            );
-
-          return file;
-        },
-      },
+      include: true,
       kotlinPlayground: true,
       math: true,
       playground: {
