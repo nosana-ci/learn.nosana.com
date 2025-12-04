@@ -50,7 +50,7 @@ export default sidebar({
       // icon: "book-open",
       prefix: "guides/",
       collapsible: true,
-      children: ["get-api-key", "my-first-deployment", "manage-dashboard"],
+      children: ["get-api-key", "my-first-deployment"],
     },
     {
       text: "GPU Markets",

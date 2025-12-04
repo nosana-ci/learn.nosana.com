@@ -14,6 +14,10 @@ Before using the SDK, ensure you have:
 - **<Glossary term="Credits">Credits</Glossary>**: Sufficient credits in your Nosana account to run deployments.
 - **Node.js**: A recent LTS version of Node.js is recommended.
 
+::: info
+If you want to create deployments directly with your Solana wallet, see the [TypeScript SDK deployments service](https://gitlab.com/nosana-ci/tools/sdk/typescript/-/tree/main/src/services/deployments?ref_type=heads).
+:::
+
 ## Installation
 
 Install the SDK from npm:

@@ -18,6 +18,7 @@ export default hopeTheme(
     nextLink: false,
     darkmode: "toggle",
     print: false,
+    repoDisplay: false,
 
     // footer
     footer: "MIT Licensed | Copyright © 2021-present Nosana",

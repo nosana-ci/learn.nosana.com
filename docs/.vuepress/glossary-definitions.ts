@@ -15,8 +15,7 @@ export const GLOSSARY_DEFINITIONS: Record<string, string> = {
     "A long-lived object that describes what to run and how to run it, creating jobs over time.",
   "GPU Market":
     "A pool of GPU resources with shared characteristics where deployments are scheduled.",
-  Host:
-    "An individual GPU machine in a GPU market that actually runs your jobs.",
+  Host: "An individual GPU machine in a GPU market that actually runs your jobs.",
   Job: "A concrete execution of your workload created from a deployment’s job definition.",
   "Job Definition":
     "The JSON specification describing image, commands, and resources for each job.",
@@ -24,5 +23,3 @@ export const GLOSSARY_DEFINITIONS: Record<string, string> = {
     "GPU market segment for validated, high-performing GPU providers suitable for critical workloads.",
   SDK: "The TypeScript Software Development Kit for interacting with Nosana.",
 };
-
-
