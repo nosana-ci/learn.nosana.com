@@ -2,6 +2,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { hopeTheme } from "vuepress-theme-hope";
 import sidebar from "./sidebar.js";
+import navbar from "./navbar.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -26,8 +27,14 @@ export default hopeTheme(
     displayFooter: true,
     contributors: false,
 
-    // navigation
+    navbar,
     sidebar,
+
+    navbarLayout: {
+      start: ["Brand"],
+      center: [""],
+      end: ["Links", "Outlook", "Search"],
+    },
 
     pageInfo: ["Category", "Tag", "ReadingTime"],
 
