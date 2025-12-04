@@ -12,5 +12,6 @@ test/.vuepress/.cache/
 test/.vuepress/.temp/
 test/.vuepress/dist/
 docs/.vuepress/**/*.js
+!docs/.vuepress/overrides/*.js
 .vscode/
 .idea

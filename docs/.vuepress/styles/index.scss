@@ -5,6 +5,10 @@ $code-lang: "css" "html" "js" "ts" "vue";
   color: var(--vp-c-accent);
 }
 
+.vp-sidebar a {
+  font-size: 16px !important;
+}
+
 .vp-sidebar-links {
   list-style: none;
 
