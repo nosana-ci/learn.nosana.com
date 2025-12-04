@@ -6,9 +6,9 @@ title: Intro
 To run your AI workload on the Nosana network, you'll need to create deployments.
 
 ## What is a deployment?
-Deployments enable you to run containerized applications on the Nosana distributed computing network. Each deployment consists of:
+Deployments enable you to run <Glossary term="Container">containerized</Glossary> applications on the Nosana distributed computing network. Each deployment consists of:
 
-- **Container Definition**: Specified via an IPFS hash containing the [job definition](../job-definition/intro.md).
+- **Container Definition**: Specified via an JSON scheme containing the [job definition](../job-definition/intro.md).
 - **Market**: The Solana public key of the compute [market](../gpu-markets.md) where the deployment runs.
 - **Replicas**: The number of instances to run.
 - **Strategy**: The [deployment strategy](./strategies.md) (SIMPLE, SIMPLE-EXTEND, SCHEDULED, INFINITE).

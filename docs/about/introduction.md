@@ -10,7 +10,7 @@ Welcome to the Nosana Network! Let us give you an introduction to Nosana and her
 
 **About Nosana**
 
-Nosana is a GPU marketplace built to make AI compute accessible and affordable for businesses and developers. Focused on AI inference, Nosana connects Hosts—data centers and hardware owners—with Clients who need scalable and cost-effective GPU compute for AI Inference workloads. Nosana is addressing the shortage of GPUs in the market, making it easier for companies to get access to the necessary hardware. They are also taking advantage of underutilized hardware, such as gaming PCs, miners, and MacBooks, and offering competitive prices for building and running AI-solutions.
+Nosana is a GPU marketplace built to make AI compute accessible and affordable for businesses and developers. Focused on <Glossary term="AI Inference">AI inference</Glossary> is a long-lived object that describes what to run…, Nosana connects Hosts—data centers and hardware owners—with Clients who need scalable and cost-effective GPU compute for AI Inference workloads. Nosana is addressing the shortage of GPUs in the market, making it easier for companies to get access to the necessary hardware. They are also taking advantage of underutilized hardware, such as gaming PCs, miners, and MacBooks, and offering competitive prices for building and running AI-solutions.
 
 Nosana provides a distributed GPU grid that allows anyone to rent compute power without the usual overhead, excessive fees of lock-in. By turning idle GPUs into valuable resources, Nosana Network helps reduce e-waste and lower operational costs while driving innovation. Learn more at [Nosana.com](https://nosana.com)
 
