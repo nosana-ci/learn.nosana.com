@@ -1,5 +1,9 @@
 $code-lang: "css" "html" "js" "ts" "vue";
 
+:root {
+  --vp-font-heading: "Space Grotesk", sans-serif;
+}
+
 .vp-sidebar-header.active:not(.exact) {
   padding-inline-start: 0.5rem;
   color: var(--vp-c-accent);
