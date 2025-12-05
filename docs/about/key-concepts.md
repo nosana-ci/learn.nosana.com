@@ -8,8 +8,8 @@ title: Key Concepts
 
 <p><Glossary term="Deployment">Deployments</Glossary> are long-lived objects that describe what to run and where/how to run it (market, strategy, replicas, timeout). Over its lifetime, a deployment will create jobs from your job definition according to its strategy.</p>
 
-- Learn more in **[Deployments Intro](../deployments/intro.md)**.
-- See configuration details in **[Deployment Options](../deployments/options.md)**.
+- Learn more in **[Deployments Intro](../getting-started/deployments/intro.md)**.
+- See configuration details in **[Deployment Options](../getting-started/deployments/options.md)**.
 
 ## Jobs
 
@@ -21,14 +21,14 @@ Each job runs the specified container image with the configured resources and co
 
 The <Glossary term="Job Definition">job definition</Glossary> is a JSON specification that describes the container image, commands, and runtime requirements for your workload. Deployments reference a job definition to know exactly what each job should run when it is scheduled onto a host.
 
-- Start with **[Job Definition Intro](../job-definition/intro.md)**.
+- Start with **[Job Definition Intro](../getting-started/job-definition/intro.md)**.
 - Explore schemas and examples in the Job Definition section.
 
 ## GPU Markets
 
 <p><Glossary term="GPU Market">GPU Markets</Glossary> represent pools of GPU resources where your deployments are scheduled.</p>
 
-- See **[GPU Markets](../gpu-markets.md)** for available markets.
+- See **[GPU Markets](../getting-started/deployments/gpu-markets.md)** for available markets.
 
 ## Hosts
 
@@ -38,7 +38,7 @@ The <Glossary term="Job Definition">job definition</Glossary> is a JSON specific
 
 You can interact with Nosana via:
 
-- **HTTP API** – Direct REST calls; see **[API Intro](../api/intro.md)**.
-- **TypeScript <Glossary term="SDK">SDK</Glossary>** – Higher-level client library; see **[TypeScript SDK Intro](../sdk/intro.md)**.
+- **HTTP API** – Direct REST calls.
+- **TypeScript <Glossary term="SDK">SDK</Glossary>** – Higher-level client library.
 
 

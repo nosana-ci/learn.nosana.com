@@ -1,5 +1,6 @@
 ---
 title: Intro
+next: strategies.md
 ---
 
 # Deployments
@@ -8,8 +9,8 @@ To run your AI workload on the Nosana network, you'll need to create <Glossary t
 ## What is a deployment?
 Deployments enable you to run <Glossary term="Container">containerized</Glossary> applications on the Nosana distributed computing network. Each deployment consists of:
 
-- **Container Definition**: Specified via an JSON scheme containing the [job definition](../job-definition/intro.md).
-- **Market**: The Solana public key of the compute [market](../gpu-markets.md) where the deployment runs.
+- **Container Definition**: Specified via an JSON scheme containing the [job definition](../getting-started/job-definition/intro.md).
+- **Market**: The Solana public key of the compute [market](gpu-markets.md) where the deployment runs.
 - **Replicas**: The number of instances to run.
 - **Strategy**: The [deployment strategy](./strategies.md) (SIMPLE, SIMPLE-EXTEND, SCHEDULED, INFINITE).
 - **Timeout**: The maximum execution time per job instance.
@@ -26,16 +27,4 @@ For all available options when creating a deployment, see the [deployment option
 - **ARCHIVED**: Permanently archived (cannot be restarted)
 - **ERROR**: Encountered an error
 - **INSUFFICIENT_FUNDS**: Not enough funds in vault to continue
-
-## Prerequisites
-
-Before creating and managing deployments, ensure you have:
-
-- **<Glossary term="API Key">API Key</Glossary>**: A valid Nosana API key. Learn how to get one in the [API key guide](../guides/get-api-key.md).
-- **Credit Balance**: Sufficient <Glossary term="Credits">credits</Glossary> on your Nosana account to run deployments.
-- **SDK (Optional)**: The Nosana Typescript <Glossary term="SDK">SDK</Glossary> can be installed for easier integration, though you can also make direct API requests. Install it via:
-  ```bash
-  npm install @nosana/sdk
-  ```
-  For more information, see the [SDK npm package](https://www.npmjs.com/package/@nosana/sdk).
 
