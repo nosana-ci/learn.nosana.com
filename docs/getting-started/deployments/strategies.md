@@ -4,12 +4,14 @@ title: Strategies
 
 # Deployment Strategies
 
-Below are the deployment strategies we currently support.
+Deployment strategies are a mechanism to control the lifecycle of the underlying jobs. Below are the deployment strategies currently supported.
 
-- **SIMPLE**: Runs the specified number of replicas once. Stops when all instances complete.
-- **SIMPLE-EXTEND**: Similar to SIMPLE but can be extended with additional replicas after completion.
-- **SCHEDULED**: Runs deployments on a predefined schedule.
-- **INFINITE**: **(COMING SOON)** Continuously maintains the specified number of replicas, restarting instances as they complete.
+- **SIMPLE**: Runs the specified number of job replicas once. Considers the deployment **STOPPED** when all replicas have stopped either because timeout was reached or the job containers terminated.
+- **SIMPLE-EXTEND**: Similar to **SIMPLE** strategy in that it runs the specified number of job replicas, but instead of terminating the jobs at the end of the timeout period, it extends them for another period equal to the timeout. The jobs of the deployment keep getting extended until there are no more funds available to run it.
+- **SCHEDULED**: Similar to **SIMPLE** strategy in that it runs the specified number of job replicas, but instead of scheduling them immediately, only schedules them at the specified instants.
+- **INFINITE**: **(COMING SOON)** Continuously maintains the specified number of replicas, scheduling new jobs right before the running jobs reach the specified timeout.
+
+## Scheduled startegy configuration
 
 When you choose the `SCHEDULED` strategy, you need to provide the schedule in cron format:
 
