@@ -51,7 +51,7 @@ export default sidebar({
       // icon: "book-open",
       prefix: "guides/",
       collapsible: true,
-      children: ["get-api-key", "my-first-deployment"],
+      children: ["get-api-key", "my-first-deployment", "deploy-deepseek-model"],
     },
   ],
 });

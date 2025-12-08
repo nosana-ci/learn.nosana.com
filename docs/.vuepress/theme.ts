@@ -95,11 +95,11 @@ export default hopeTheme(
     plugins: {
       copyright: true,
 
-      docsearch: {
-        appId: "O80DOX8SB5",
-        apiKey: "3419239266c440c627d6bdd2f1cb82ea",
-        indexName: "nosana",
-      },
+      // docsearch: {
+      //   appId: "O80DOX8SB5",
+      //   apiKey: "3419239266c440c627d6bdd2f1cb82ea",
+      //   indexName: "nosana",
+      // },
 
       // PWA plugin options – allow extra fields like `cachePic`
       pwa: {
