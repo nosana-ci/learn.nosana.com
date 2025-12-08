@@ -28,8 +28,11 @@ The <Glossary term="Job Definition">job definition</Glossary> is a JSON specific
 
 ## Hosts
 
-<p><Glossary term="Host">Hosts</Glossary> are the individual computers that actually run jobs. Each host belongs to a specific GPU Market that matches the hardware they offer.</p>
+<p><Glossary term="Host">Hosts</Glossary> are the individual GPU machines that actually run your jobs. Each host belongs to a specific GPU Market, and are matched onto suitable hosts in the selected market based on their resource requirements.</p>
 
-## Nosana APIs
+## Access Methods: API and SDK
 
-You can interact with Nosana APIs directly using HTTP calls to the supplied REST endpoints, or via the **TypeScript <Glossary term="SDK">SDK</Glossary>** libraries.
+You can interact with Nosana via:
+
+- **HTTP API** – Direct REST calls.
+- **TypeScript <Glossary term="SDK">SDK</Glossary>** – Higher-level client library.
