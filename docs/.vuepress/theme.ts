@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 
 export default hopeTheme(
   {
-    hostname: "https://docs.nosana.com",
+    hostname: "https://learn.nosana.com",
     logo: "/assets/logo.svg",
     logoDark: "/assets/logo-dark.svg",
     repo: "https://github.com/nosana-ci/client-docs",
@@ -95,11 +95,11 @@ export default hopeTheme(
     plugins: {
       copyright: true,
 
-      // docsearch: {
-      //   appId: "O80DOX8SB5",
-      //   apiKey: "3419239266c440c627d6bdd2f1cb82ea",
-      //   indexName: "nosana",
-      // },
+      docsearch: {
+        appId: "5TF6GMBL35",
+        apiKey: "ee0153a96d63e7191fd01b46145f2ef0",
+        indexName: "learn_nosana_com_5tf6gmbl35_pages",
+      },
 
       // PWA plugin options – allow extra fields like `cachePic`
       pwa: {
