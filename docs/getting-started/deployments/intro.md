@@ -5,7 +5,7 @@ next: strategies.md
 
 # Deployments
 
-<Glossary term="Deployment">Deployments</Glossary> are the best way to run workloads on the Nosana Network because they offer a single entrypoint to defining the workload (ie. the job definition) with additional controls over how it is scheduled, stopped or extended.
+<p><Glossary term="Deployment">Deployments</Glossary> are the best way to run workloads on the Nosana Network because they offer a single entrypoint to defining the workload (ie. the job definition) with additional controls over how it is scheduled, stopped or extended.</p>
 
 ## Elements of a deployment
 
