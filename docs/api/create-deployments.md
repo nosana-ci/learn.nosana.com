@@ -27,7 +27,7 @@ For all available fields, see **[Deployment Options](../getting-started/deployme
 
 ## Create a Deployment
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -100,7 +100,7 @@ curl -X POST "https://dashboard.k8s.prd.nos.ci/api/deployments/create" \
   }'
 ```
 
-:::
+::::
 
 The response contains the created deployment, including its `id`, which you will need to start or manage it.
 
@@ -108,7 +108,7 @@ The response contains the created deployment, including its `id`, which you will
 
 New deployments are created in a **draft** state and must be explicitly started:
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -123,11 +123,11 @@ async function startDeployment(id: string) {
 
 ```bash
 curl -s \
+  -X POST \
   -H "Authorization: Bearer $NOSANA_API_KEY" \
   https://dashboard.k8s.prd.nos.ci/api/deployments/<deployment_id>/start | jq .
 ```
 
-:::
+::::
 
 Replace `<deployment_id>` with the `id` returned from the create call.
-

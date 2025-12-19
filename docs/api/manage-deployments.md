@@ -29,7 +29,7 @@ export NOSANA_API_KEY="nos_xxx_your_api_key"
 
 ## List Deployments
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -45,11 +45,11 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments | jq .
 ```
 
-:::
+::::
 
 ## Get a Deployment
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -65,13 +65,13 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID | jq .
 ```
 
-:::
+::::
 
 ## Update Job Definition (Create a Revision)
 
 Create a new revision of the job definition for an existing deployment:
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -96,13 +96,13 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/revisions | jq .
 ```
 
-:::
+::::
 
 The body should contain a `job_definition` matching the structure described in the job definition docs.
 
 ## Update Replica Count
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -122,11 +122,11 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/update-replicas | jq .
 ```
 
-:::
+::::
 
 ## Update Schedule (SCHEDULED Strategy Only)
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -146,14 +146,14 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/update-schedule | jq .
 ```
 
-:::
+::::
 
 > **Note**: The schedule only applies to deployments using the `SCHEDULED` strategy.  
 > For cron syntax examples, see **[Deployment Strategies](../getting-started/deployments/strategies.md)**.
 
 ## Update Timeout
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -173,13 +173,13 @@ curl -s \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/update-timeout | jq .
 ```
 
-:::
+::::
 
 ## Start a Deployment
 
 Start an existing deployment that is in a draft or stopped state:
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -192,17 +192,18 @@ await deployment.start();
 
 ```bash
 curl -s \
+  -X POST \
   -H "Authorization: Bearer $NOSANA_API_KEY" \
   https://dashboard.k8s.prd.nos.ci/api/deployments/YOUR_DEPLOYMENT_ID/start | jq .
 ```
 
-:::
+::::
 
 ## Stop a Deployment
 
 Stop a running deployment:
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -215,11 +216,12 @@ await deployment.stop();
 
 ```bash
 curl -s \
+  -X POST \
   -H "Authorization: Bearer $NOSANA_API_KEY" \
   https://dashboard.k8s.prd.nos.ci/api/deployments/<deployment_id>/stop | jq .
 ```
 
-:::
+::::
 
 The response will contain a `status` (for example `"STOPPING"`) and an `updated_at` timestamp.
 
@@ -227,7 +229,7 @@ The response will contain a `status` (for example `"STOPPING"`) and an `updated_
 
 Archive a deployment to remove it from your active list while keeping history:
 
-::: code-tabs
+:::: code-tabs
 
 @tab TypeScript SDK
 
@@ -240,11 +242,12 @@ await deployment.archive();
 
 ```bash
 curl -s \
+  -X POST \
   -H "Authorization: Bearer $NOSANA_API_KEY" \
   https://dashboard.k8s.prd.nos.ci/api/deployments/<deployment_id>/archive | jq .
 ```
 
-:::
+::::
 
 The response will include `status: "ARCHIVED"` when successful.
 
@@ -290,4 +293,3 @@ This example gets a deployment, updates its replica count and timeout, and then 
 ## Full API Reference
 
 For all deployment endpoints and fields, consult the **[API Swagger reference](https://dashboard.k8s.prd.nos.ci/api/swagger)**.
-
