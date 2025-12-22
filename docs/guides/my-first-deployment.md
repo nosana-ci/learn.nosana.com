@@ -8,7 +8,7 @@ A step-by-step guide to creating your first deployment on Nosana through the Nos
 
 ## Prerequisites
 
-- **Nosana Account**: an account registred on the [Nosana Dashboard](https://dashboard.nosana.com/)
+- **Nosana Deploy Account**: an account registred on [Nosana Deploy](https://deploy.nosana.com/)
 - **Credit Balance**: Sufficient credit balance on your Nosana account to run deployments.
 
 ## Steps

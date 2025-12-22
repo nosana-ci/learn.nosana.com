@@ -9,8 +9,8 @@ export const GLOSSARY_DEFINITIONS: Record<string, string> = {
     "A lightweight, isolated environment that packages your app code and dependencies (e.g. a Docker image).",
   Credits:
     "Usage-based currency consumed when running deployments and jobs on Nosana, claimable from the Dashboard.",
-  Dashboard:
-    "The Nosana web UI where you manage API keys, credits, deployments, and monitor workloads.",
+  "Nosana Deploy":
+    "The Nosana web UI where you manage your API keys, credits, deployments, and monitor workloads.",
   Deployment:
     "A long-lived object that describes what to run and how to run it, creating jobs over time.",
   "GPU Market":
