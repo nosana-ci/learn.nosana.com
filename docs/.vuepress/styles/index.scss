@@ -34,3 +34,27 @@ $code-lang: "css" "html" "js" "ts" "vue";
     }
   }
 }
+
+/* Custom layout for homepage features: force 3-2 grid for 5 items */
+.vp-features {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .vp-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .vp-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vp-hero-infos {
+  margin-top: 25px;
+}
