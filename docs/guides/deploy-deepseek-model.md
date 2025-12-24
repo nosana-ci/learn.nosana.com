@@ -8,7 +8,7 @@ Learn how to deploy a DeepSeek-R1 LLM on the Nosana network and call it through 
 
 ## Prerequisites
 
-- **Nosana Account**: an account registred on the [Nosana Dashboard](https://dashboard.nosana.com/)
+- **Nosana Account**: an account registred on the [Deploy Dashboard](https://deploy.nosana.com/)
 - **Credit Balance**: sufficient credit balance on your Nosana account to run deployments.
 - **HTTP Client**: `curl`, Postman, or any HTTP client you prefer.
 
